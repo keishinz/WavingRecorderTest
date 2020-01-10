@@ -13,6 +13,8 @@
 		806FCDD023C868460036A154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806FCDCE23C868460036A154 /* Main.storyboard */; };
 		806FCDD223C868470036A154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806FCDD123C868470036A154 /* Assets.xcassets */; };
 		806FCDD523C868470036A154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806FCDD323C868470036A154 /* LaunchScreen.storyboard */; };
+		806FCDE423C86A5E0036A154 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 806FCDE223C86A5E0036A154 /* SCSiriWaveformView.m */; };
+		806FCDE623C8A2AB0036A154 /* TimRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806FCDE523C8A2AB0036A154 /* TimRecorderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		806FCDD123C868470036A154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		806FCDD423C868470036A154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		806FCDD623C868470036A154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		806FCDE123C86A5E0036A154 /* WavingRecorderTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WavingRecorderTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		806FCDE223C86A5E0036A154 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSiriWaveformView.m; sourceTree = "<group>"; };
+		806FCDE323C86A5E0036A154 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSiriWaveformView.h; sourceTree = "<group>"; };
+		806FCDE523C8A2AB0036A154 /* TimRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimRecorderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +65,24 @@
 				806FCDC823C868460036A154 /* AppDelegate.swift */,
 				806FCDCA23C868460036A154 /* SceneDelegate.swift */,
 				806FCDCC23C868460036A154 /* ViewController.swift */,
+				806FCDE523C8A2AB0036A154 /* TimRecorderViewController.swift */,
+				806FCDE723C8A2EC0036A154 /* SCSiriWaveformView */,
 				806FCDCE23C868460036A154 /* Main.storyboard */,
 				806FCDD123C868470036A154 /* Assets.xcassets */,
 				806FCDD323C868470036A154 /* LaunchScreen.storyboard */,
 				806FCDD623C868470036A154 /* Info.plist */,
+				806FCDE123C86A5E0036A154 /* WavingRecorderTest-Bridging-Header.h */,
 			);
 			path = WavingRecorderTest;
+			sourceTree = "<group>";
+		};
+		806FCDE723C8A2EC0036A154 /* SCSiriWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				806FCDE323C86A5E0036A154 /* SCSiriWaveformView.h */,
+				806FCDE223C86A5E0036A154 /* SCSiriWaveformView.m */,
+			);
+			path = SCSiriWaveformView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +117,7 @@
 				TargetAttributes = {
 					806FCDC423C868460036A154 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -140,7 +159,9 @@
 			files = (
 				806FCDCD23C868460036A154 /* ViewController.swift in Sources */,
 				806FCDC923C868460036A154 /* AppDelegate.swift in Sources */,
+				806FCDE423C86A5E0036A154 /* SCSiriWaveformView.m in Sources */,
 				806FCDCB23C868460036A154 /* SceneDelegate.swift in Sources */,
+				806FCDE623C8A2AB0036A154 /* TimRecorderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VR8K5GN7PS;
 				INFOPLIST_FILE = WavingRecorderTest/Info.plist;
@@ -293,6 +315,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftProject.Keishin.WavingRecorderTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WavingRecorderTest/WavingRecorderTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VR8K5GN7PS;
 				INFOPLIST_FILE = WavingRecorderTest/Info.plist;
@@ -311,6 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftProject.Keishin.WavingRecorderTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WavingRecorderTest/WavingRecorderTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
